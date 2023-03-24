@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelines';
+import { ApplicationStage } from './application-stage';
 
 interface PipelineStackProps extends cdk.StackProps {
   branch: string;
@@ -22,5 +23,14 @@ export class PipelineStack extends cdk.Stack {
         commands: ['npm ci', 'npm run build', 'npx cdk synth'],
       }),
     });
+
+    const applicationStage = new ApplicationStage(this, `${props.branch}-stage`, {
+      branch: props.branch,
+      env: {
+        account: props.awsAccount,
+        region: props.awsRegion,
+      },
+    });
+    pipeline.addStage(applicationStage);
   }
 }
