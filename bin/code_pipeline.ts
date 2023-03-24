@@ -9,10 +9,10 @@ new PipelineStack(app, 'CognitoDevPipelineStack', {
   //DEV account
   branch: 'dev',
   awsRegion: 'us-east-1',
-  awsAccount: '',
+  awsAccount: '869397599638',
 
   env: {
-    account: '',
+    account: '670951049310',
     region: 'us-east-1',
   },
 });
@@ -24,11 +24,11 @@ new PipelineStack(app, 'CognitoProdPipelineStack', {
   awsAccount: '',
 
   env: {
-    account: '',
+    account: '670951049310',
     region: 'us-east-1',
   },
 });
 
 app.synth();
 
-// cdk bootstrap --trust <awsAccountAdmin> --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess aws://<awsAccountPipeline>/us-east-1
+// cdk bootstrap --trust 670951049310 --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess aws://869397599638/us-east-1
