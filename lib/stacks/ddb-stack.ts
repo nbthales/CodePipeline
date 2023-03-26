@@ -8,7 +8,7 @@ export class DdbStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    this.table = new dynamodb.Table(this, 'devops-trabalho-final', {
+    /*this.table = new dynamodb.Table(this, 'devops-trabalho-final', {
       tableName: 'devops-trabalho-final',
       partitionKey: {
         name: 'pk',
@@ -20,20 +20,6 @@ export class DdbStack extends cdk.Stack {
       },
       removalPolicy: cdk.RemovalPolicy.DESTROY,
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
-    });
-
-    this.table = new dynamodb.Table(this, 'nota-60', {
-      tableName: 'nota-60',
-      partitionKey: {
-        name: 'pk',
-        type: dynamodb.AttributeType.STRING,
-      },
-      sortKey: {
-        name: 'sk',
-        type: dynamodb.AttributeType.STRING,
-      },
-      removalPolicy: cdk.RemovalPolicy.DESTROY,
-      billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
-    });
+    });*/
   }
 }
