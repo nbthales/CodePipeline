@@ -17,4 +17,3 @@ new PipelineStack(app, 'dev-pipeline-stack', {
 });
 
 app.synth();
-// cdk bootstrap --trust 670951049310 --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess aws://869397599638/us-east-1

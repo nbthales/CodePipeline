@@ -1,14 +1,17 @@
-# Welcome to your CDK TypeScript project
+# CodePipeline - AWS CDK TypeScript
 
-This is a blank project for CDK development with TypeScript.
+Esse projeto tem o objetivo de construir e manter a infraestrutura dos recursos AWS.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Diagrama da Arquitetura
 
-## Useful commands
+<p align="center"><img src="./docs/diagrama.png"></p>
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## Comandos úteis
+
+- `aws configure` configurações que a AWS Command Line Interface (AWS CLI) usa para interagir com a AWS
+- `npm install` instalação de pacotes, gerenciamento da versões e gerenciamento de dependências necessárias
+- `cdk bootstrap --trust 670951049310 --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess aws://869397599638/us-east-1` permitindo acesso de uma conta à outra para provisionar pilha de bootstrap no ambiente da AWS usando um template moderno
+
+## Apresentação
+
+- [Google Drive](https://docs.google.com/presentation/d/1GraoJJ0YqJEDcV727Tz2rkd0Kk5_1wuXmod9RLrfvK0/edit?usp=sharing)
