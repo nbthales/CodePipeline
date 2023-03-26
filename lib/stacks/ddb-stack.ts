@@ -21,5 +21,19 @@ export class DdbStack extends cdk.Stack {
       removalPolicy: cdk.RemovalPolicy.DESTROY,
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
     });
+
+    this.table = new dynamodb.Table(this, 'nota-60', {
+      tableName: 'nota-60',
+      partitionKey: {
+        name: 'pk',
+        type: dynamodb.AttributeType.STRING,
+      },
+      sortKey: {
+        name: 'sk',
+        type: dynamodb.AttributeType.STRING,
+      },
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+      billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
+    });
   }
 }
